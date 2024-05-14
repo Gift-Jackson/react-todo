@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: var(--font-1);
+}
+
+:root {
+  --primary-color: mediumslateblue;
+  --secondary-color: #f5f6f7;
+  --bg-color: #fefefe;
+  --text-color: #404040;
+  --grey: #a0a0a0;
+  --radius: .5em;
+  --border-color: rgba(123, 104, 238, .09);
+  --border: #f5f6f7;
+  --shadow: 0 5px 10px rgba(0, 0, 0, 0.09);
+  --white: #fefefe;
+  --font-1: "Poppins", sans-serif;
+  --font-2: "Jaro", sans-serif;
+
+  /* theme */
+  --bg-slider: #f5f6f7;
+  --slider: #fefefe;
+  --theme-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  --secondary-color: #30313d;
+  --bg-color: #17181f;
+  --text-color: #fefefe;
+  --grey: #76789b;
+
+  /* theme */
+  --bg-slider: #30313d;
+  --slider: var(--primary-color);
+  --theme-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+*::-webkit-scrollbar {
+  height: .5rem;
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+button{
+  border: 0;
+}
+button span{
+  color: inherit;
+}
+button i{
+  color: inherit;
+}
+button span{
+  font-size: inherit;
+}
+
+main{
+  width: min(90%, 480px);
+  margin: 1em auto;
+}
+@media screen and (max-width:480px) {
+  main{
+    margin: 0 auto;
+  }
+}
