@@ -61,6 +61,12 @@
 .wrapper{
     margin-top: .5em;
 }
+
+.end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .toggle{
     background-color: transparent;
     padding: .5em;
@@ -75,11 +81,11 @@
     flex-direction: column;
 }
 .input_wrap textarea{
-    resize: none;
+    resize: vertical;
     padding: 1em;
     border: 1px solid var(--primary-color);
     border-radius: .5em;
-    background-color: rgba(175, 163, 245, 0.25);
+    background-color: rgba(169, 155, 248, 0.25);
 }
 
 .input_wrap textarea::placeholder{
@@ -87,9 +93,10 @@
 }
 .btns{
     display: flex;
-    margin-top: .5em;
+    margin-top: 1em;
     justify-content: flex-end;
     gap: 1em;
+    padding-right: .3em;
 }
 .close{
     background-color: transparent;
@@ -99,8 +106,41 @@
     color: var(--text-color);
 }
 .add{
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: .5em .85em;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: .75em 1.2em;
     border-radius: .5em;
+}
+
+.todos{
+    margin-top: 1em;
+}
+.todo{
+    margin-bottom: .5em;
+    padding: 1em;
+    background-color: var(--border-color);
+    border-radius: .5em;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+.todo p{
+    width: 80%;
+    font-size: small;
+    text-align: justify;
+}
+.del{
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    border-radius: .5em;
+}
+.del:hover{
+    background-color: var(--secondary-color);
 }
