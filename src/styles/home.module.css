@@ -87,13 +87,32 @@
     border-radius: .5em;
     background-color: rgba(123, 104, 238, 0.09) ;
     filter: brightness(170%);
+    width: 100%;
+}
+.area{
+    position: relative;
+    width: 100%;
+}
+.tip{
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    font-size: small;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: .1em 1em;
+    filter: brightness(180%);
+    border-radius: .3em;
 }
 
 .input_wrap textarea::placeholder{
     color: var(--text-color-light);
 }
-.input_wrap textarea:focus{
-   
+.info{
+    font-size: small;
+    color: var(--text-color-light);
+    line-height: 1;
+    margin-top: .3em;
 }
 .btns{
     display: flex;
