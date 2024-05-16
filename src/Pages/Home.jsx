@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 const Home = () => {
   const [showInput, setShowInput] = useState(false);
-  const [todos, setTodos] = useState(["run", "Eat", "go Home"]);
+  const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState("");
   const [search, setSearch] = useState("");
 
@@ -45,7 +45,7 @@ const Home = () => {
       y: 0,
       transition: {
         type: "spring",
-        stiffness: "400",
+        stiffness: "700",
       },
     },
     exit: {
@@ -64,9 +64,8 @@ const Home = () => {
       staggerChildren: 0.3,
       transition: {
         delay: 0.2,
-
         type: "spring",
-        stiffness: "400",
+        stiffness: "700",
       },
     },
    
