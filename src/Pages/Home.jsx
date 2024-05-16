@@ -58,10 +58,6 @@ const Home = () => {
           stiffness: "700",
         },
       },
-      exit: {
-        opacity: 0,
-        y: -10,
-      },
     };
     const todoVars = {
       initial: {
@@ -128,7 +124,6 @@ const Home = () => {
 
           <div className={styles.wrapper}>
             {showInput ? (
-              <AnimatePresence>
                 <motion.div
                   variants={boxVars}
                   initial="initial"
@@ -155,7 +150,6 @@ const Home = () => {
                     </button>
                   </div>
                 </motion.div>
-              </AnimatePresence>
             ) : (
               <div className={styles.end}>
                 <motion.button
