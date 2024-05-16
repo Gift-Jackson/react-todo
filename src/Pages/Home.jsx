@@ -5,8 +5,13 @@ import { toast } from "sonner";
 
 const Home = () => {
   const [showInput, setShowInput] = useState(false);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(["run", "Eat", "go Home"]);
   const [newTodo, setNewTodo] = useState("");
+  const [search, setSearch] = useState("");
+
+  const filteredItems = todos.filter((item) => {
+    return item.toLowerCase().includes(search.toLowerCase());
+  })
 
   const handleChange = (e) => {
     setNewTodo(e.target.value);
@@ -56,7 +61,7 @@ const Home = () => {
     animate: {
       opacity: 1,
       y: 0,
-      staggerChildren: "0.2s",
+      staggerChildren: 0.3,
       transition: {
         delay: 0.2,
 
@@ -64,10 +69,7 @@ const Home = () => {
         stiffness: "400",
       },
     },
-    exit: {
-      opacity: 0,
-      y: -10,
-    },
+   
   };
 
   return (
@@ -82,13 +84,18 @@ const Home = () => {
 
         <div className={styles.search}>
           <span className="material-symbols-outlined">search</span>
-          <input type="text" placeholder="Search todo..." />
+          <input
+            type="text"
+            placeholder="Search todo..."
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+          />
         </div>
 
         <div>
           <ul className={styles.todos}>
             <AnimatePresence mode="popLayout">
-              {todos.map((todo, index) => (
+              {filteredItems.map((todo, index) => (
                 <motion.li
                   variants={todoVars}
                   initial="initial"
@@ -99,7 +106,7 @@ const Home = () => {
                 >
                   <p>{todo}</p>
                   <button
-                    className={styles.del}
+                    className={styles.del} 
                     onClick={() => deleteTodo(index)}
                   >
                     <i className="fa-solid fa-trash"></i>

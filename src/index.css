@@ -18,7 +18,7 @@
   --text-color: #404040;
   --grey: #a0a0a0;
   --radius: .5em;
-  --border-color: rgba(123, 104, 238, .09);
+  --border-color: rgba(148, 142, 179, 0.09);
   --border: #f5f6f7;
   --shadow: 0 5px 10px rgba(0, 0, 0, 0.09);
   --white: #fefefe;
@@ -36,10 +36,11 @@
 }
 
 .dark {
-  --secondary-color: #30313d;
-  /* --bg-color: #17181f; */
-  --bg-color: #121212;
+  --secondary-color:  rgba(148, 142, 179, 0.09);
+  --bg-color: #17181f;
+  /* --bg-color: hsl(0, 0%, 10%); */
   --text-color: #fefefe;
+  --text-color-light: #70717d;
   --grey: #76789b;
 
   /* theme */
