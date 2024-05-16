@@ -99,10 +99,12 @@
     right: .5em;
     font-size: small;
     background-color: var(--secondary-color);
+    backdrop-filter: blur(10px);
     color: var(--primary-color);
     padding: .1em 1em;
     filter: brightness(180%);
     border-radius: .3em;
+    z-index: 9;
 }
 
 .input_wrap textarea::placeholder{
