@@ -102,7 +102,7 @@ const Home = () => {
             value={search}
           />
         </div>
-        <p className={styles.info}>Press Enter after each todo entry in the textarea to add more than one task.</p>
+        <p className={styles.info}>Press Enter after each todo entry in the textarea to add more than one item.</p>
         <div>
           <ul className={styles.todos}>
             <AnimatePresence mode="popLayout">
@@ -145,7 +145,7 @@ const Home = () => {
                   onKeyDown={handleKeyPress}
                 >
                 </textarea>
-                <span className={styles.tip}>{newLine ? "Multi-todo" : "Single todo"}</span>
+                <span className={styles.tip}>{newLine ? "Multi-item" : "Single item"}</span>
               </div>
               <div className={styles.btns}>
                 <button onClick={toggleInput} className={styles.close}>
